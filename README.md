@@ -1,5 +1,5 @@
 
-# Specification 'timing-entry-names-registry'
+# Timing Entry Names Registry
 
-This is the repository for timing-entry-names-registry. You're welcome to contribute! Let's make the Web rock our socks
-off!
+This is the repository for the registry of PerformanceEntry.entryType identifiers used in [Performance Timeline](https://www.w3.org/TR/performance-timeline/).
+
