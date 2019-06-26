@@ -67,6 +67,11 @@
 			<li>Each entry should include a link that references a public available
 			specification (PAS) that defines the associated interface type.</li>
 			<li>Each entry must include contact information of the requestor.</li>
+                        <li>Each entry must include an <dfn><code>availableFromTimeline</code></dfn> boolean
+                            indicating whether this entry type is available from the
+                            <a data-cite="hr-time-2#sec-performance">Performance</a> interface. </li>
+                        <li>Each entry must include a <dfn><code>maxBufferSize</code></dfn> indicating the maximum
+                            buffer size for this entry type.</li>
 		</ul>
 		<p>An update to this registry is an addition, change or deletion of an
 		identifier. Any person can request an update to this registry by pull
@@ -87,6 +92,8 @@
 				<tr>
 					<th><code>entryType</code> Identifier</th>
 					<th>Interface Type(s)</th>
+                                        <th><a>availableFromTimeline</a></th>
+                                        <th><a>maxBufferSize</a></th>
 					<th>Public Specification(s)</th>
 					<th>Requestor Contact</th>
 				</tr>
@@ -97,6 +104,8 @@
 					<td>
 						<a data-cite="USER-TIMING-2#dom-performancemark"><code>PerformanceMark</code></a>
 					</td>
+                                        <td><code>True</code></td>
+                                        <td><code>Infinite</code></td>
 					<td>[[!USER-TIMING-2]]</td>
 					<td>
 						<a href="https://www.w3.org/webperf/">W3C</a>
@@ -108,6 +117,8 @@
 						<a data-cite=
 						"USER-TIMING-2#dom-performancemeasure"><code>PerformanceMeasure</code></a>
 					</td>
+                                        <td><code>True</code></td>
+                                        <td><code>Infinite</code></td>
 					<td>[[!USER-TIMING-2]]</td>
 					<td>
 						<a href="https://www.w3.org/webperf/">W3C</a>
@@ -119,6 +130,8 @@
 						<a data-cite=
 						"NAVIGATION-TIMING-2#dom-performancenavigationtiming"><code>PerformanceNavigationTiming</code></a>
 					</td>
+                                        <td><code>True</code></td>
+                                        <td><code>Infinite</code></td>
 					<td>[[!NAVIGATION-TIMING-2]]</td>
 					<td>
 						<a href="https://www.w3.org/webperf/">W3C</a>
@@ -130,6 +143,8 @@
 						<a data-cite=
 						"RESOURCE-TIMING-2#dom-performanceresourcetiming"><code>PerformanceResourceTiming</code></a>
 					</td>
+                                        <td><code>True</code></td>
+                                        <td><code>250</code></td>
 					<td>[[!RESOURCE-TIMING-2]]</td>
 					<td>
 						<a href="https://www.w3.org/webperf/">W3C</a>
@@ -141,6 +156,8 @@
 						<a data-cite=
 						"LONGTASKS-1#performancelongtasktiming"><code>PerformanceLongTaskTiming</code></a>
 					</td>
+                                        <td><code>False</code></td>
+                                        <td>0</td>
 					<td>[[!LONGTASKS-1]]</td>
 					<td>
 						<a href="https://www.w3.org/webperf/">W3C</a>
@@ -152,6 +169,8 @@
 						<a data-cite=
 						"PAINT-TIMING#performancepainttiming"><code>PerformancePaintTiming</code></a>
 					</td>
+                                        <td><code>True</code></td>
+                                        <td><code>1</code></td>
 					<td>[[!PAINT-TIMING]]</td>
 					<td>
 						<a href="https://www.w3.org/webperf/">W3C</a>
