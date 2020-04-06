@@ -73,8 +73,16 @@
                         <li>Each entry must include a <dfn><code>maxBufferSize</code></dfn> indicating the maximum
                             buffer size for this entry type.</li>
 		</ul>
-		<p>An update to this registry is an addition, change or deletion of an
-		identifier. Any person can request an update to this registry by pull
+		<p>An update to this registry is one of the following:
+      <ul>
+        <li>An addition or deprecation of an identifier. Removal of identifiers is
+          strongly discouraged.
+        </li>
+        <li>An addition, change, or removal of a column to the table. The column
+          containing identifiers must not be removed or changed.
+        </li>
+      </ul> 
+    Any person can request an update to this registry by pull
 		requests to the <a href=
 		"https://github.com/w3c/timing-entrytypes-registry/">timing-entrytypes-registry</a>
 		repository. The Web Performance Working Group will place it on an upcoming
