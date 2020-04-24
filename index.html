@@ -1,79 +1,85 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta content="text/html; charset=utf-8" http-equiv="content-type">
-	<title>Timing Entry Names Registry</title>
-	<script async class="remove" src=
-	"https://www.w3.org/Tools/respec/respec-w3c">
-	</script>
-	<script class="remove">
-	 var respecConfig = {
-	     shortName:            "timing-entrytypes-registry",
-	   specStatus:           "ED",
-	     // specStatus:           "WG-NOTE",
-	     noRecTrack: true,
-	     edDraftURI:  "https://w3c.github.io/timing-entrytypes-registry/",
-	     editors:  [
-	       {
-	         name:    "Philippe Le Hegaret"
-	       ,  company: "W3C"
-	       ,  w3cid:   "6457"
-	     }
-	     ],
-	     wg: "Web Performance Working Group",
-	     wgURI: "https://www.w3.org/webperf/",
-	     wgPatentURI:  "https://www.w3.org/2004/01/pp-impl/45211/status",
-	     github: {
-				 repoURL: "https://github.com/w3c/timing-entrytypes-registry/",
-				 branch: "master"
-			 },
-			 lint: {
+  <meta content="text/html; charset=utf-8" http-equiv="content-type">
+  <title>Timing Entry Names Registry</title>
+  <script async class="remove" src=
+  "https://www.w3.org/Tools/respec/respec-w3c">
+  </script>
+  <script class="remove">
+   var respecConfig = {
+       shortName:            "timing-entrytypes-registry",
+       specStatus:           "ED",
+       // specStatus:           "WG-NOTE",
+       noRecTrack: true,
+       edDraftURI:  "https://w3c.github.io/timing-entrytypes-registry/",
+       editors:  [
+         {
+           name:    "Philippe Le Hegaret"
+         ,  company: "W3C"
+         ,  w3cid:   "6457"
+       }
+       ],
+       wg: "Web Performance Working Group",
+       wgURI: "https://www.w3.org/webperf/",
+       wgPatentURI:  "https://www.w3.org/2004/01/pp-impl/45211/status",
+       github: {
+         repoURL: "https://github.com/w3c/timing-entrytypes-registry/",
+         branch: "master"
+       },
+       lint: {
         "check-punctuation": true,
        },
        doJsonLd: true,
        xref: [ "performance-timeline-2" ],
        mdn: true,
-	   };
-	</script>
+     };
+  </script>
 </head>
 <body>
-	<section id="abstract">
-		<p>This document provides a registry of <a>PerformanceEntry.entryType</a>
-		used in Performance Timeline [[PERFORMANCE-TIMELINE-2]].</p>
-	</section>
-	<section id="sotd">
-		<p>For updates, see <a href='#registration'>Registration Entry Requirements
-		and Update Process</a>.</p>
-	</section>
-	<section class='informative' id='purpose'>
-		<h2>Purpose</h2>
-		<p>Performance Timeline [[PERFORMANCE-TIMELINE-2]] defines primitives that
-		enable web developers to access, instrument, and retrieve various performance
-		metrics from the full lifecycle of a web application. The performance data of
-		various metrics is hosted in <dfn data-cite=
-		'PERFORMANCE-TIMELINE-2#dom-performanceentry'><code>PerformanceEntry</code></dfn> objects. The
-		type of interface for a <a>PerformanceEntry</a> object is
-		identified with <dfn data-lt="PerformanceEntry.entryType" data-cite=
-		'PERFORMANCE-TIMELINE-2#dom-performanceentry-entrytype'><code>entryType</code></dfn>.</p>
-		<p>This registry is intended to provide a central location for enumerating
-		identified interface types of <a>PerformanceEntry</a> object.</p>
-	</section>
-	<section class='normative' id='registration'>
-		<h2>Registration Entry Requirements and Update Process</h2>
-		<ul>
-			<li>Each entry must include a unique identifier used by <a>PerformanceEntry.entryType</a>,
-			where the scope of uniqueness is the <a>entryType</a> itself.
-			</li>
-			<li>Each entry should include a link that references a public available
-			specification (PAS) that defines the associated interface type.</li>
-			<li>Each entry must include contact information of the requestor.</li>
-                        <li>Each entry must include an <dfn><code>availableFromTimeline</code></dfn> boolean
-                            indicating whether this entry type is available from the
-                            <a data-cite="hr-time-2#sec-performance">Performance</a> interface. </li>
-                        <li>Each entry must include a <dfn><code>maxBufferSize</code></dfn> indicating the maximum
-                            buffer size for this entry type.</li>
-		</ul>
-		<p>An update to this registry is one of the following:
+  <section id="abstract">
+    <p>This document provides a registry of <a>PerformanceEntry.entryType</a>
+    used in Performance Timeline [[PERFORMANCE-TIMELINE-2]].</p>
+  </section>
+  <section id="sotd">
+    <p>For updates, see <a href='#registration'>Registration Entry Requirements
+    and Update Process</a>.</p>
+  </section>
+  <section class='informative' id='purpose'>
+    <h2>Purpose</h2>
+    <p>Performance Timeline [[PERFORMANCE-TIMELINE-2]] defines primitives that
+    enable web developers to access, instrument, and retrieve various performance
+    metrics from the full lifecycle of a web application. The performance data of
+    various metrics is hosted in <dfn data-cite=
+    'PERFORMANCE-TIMELINE-2#dom-performanceentry'><code>PerformanceEntry</code></dfn> objects. The
+    type of interface for a <a>PerformanceEntry</a> object is
+    identified with <dfn data-lt="PerformanceEntry.entryType" data-cite=
+    'PERFORMANCE-TIMELINE-2#dom-performanceentry-entrytype'><code>entryType</code></dfn>.</p>
+    <p>This registry is intended to provide a central location for enumerating
+    identified interface types of <a>PerformanceEntry</a> object.</p>
+  </section>
+  <section class='normative' id='registration'>
+    <h2>Registration Entry Requirements and Update Process</h2>
+    <ul>
+      <li>Each entry type must include a unique identifier used by <a>PerformanceEntry.entryType</a>,
+      where the scope of uniqueness is the <a>entryType</a> itself.
+      </li>
+      <li>Each entry type should include a link that references a public available
+        specification (PAS) that defines the associated interface type.</li>
+      <li>Each entry type must include contact information of the requestor.</li>
+      <li>Each entry type must include an <dfn><code>availableFromTimeline</code></dfn> boolean
+        indicating whether this entry type is available from the
+      <a data-cite="hr-time-2#sec-performance">Performance</a> interface. </li>
+      <li>Each entry type must include a <dfn><code>maxBufferSize</code></dfn> indicating the maximum
+        buffer size for this entry type.</li>
+      <li>Each entry type must specify an algorithm <dfn>should add entry</dfn> which,
+        given a {{PerformanceEntry}} |entry| of the entry type and a <a data-cite=
+        'PERFORMANCE-TIMELINE-2#performanceobserverinit-dictionary'>PerformanceObserverInit</a>
+        |options| of an observer observing that entry type, determines whether |entry| must
+        be appended to the observer's <a data-cite=
+        'PERFORMANCE-TIMELINE-2#dfn-observer-buffer'>observer buffer</a> or not.</li>
+    </ul>
+    <p>An update to this registry is one of the following:
       <ul>
         <li>An addition or deprecation of an identifier. Removal of identifiers is
           strongly discouraged.
@@ -83,106 +89,113 @@
         </li>
       </ul> 
     Any person can request an update to this registry by pull
-		requests to the <a href=
-		"https://github.com/w3c/timing-entrytypes-registry/">timing-entrytypes-registry</a>
-		repository. The Web Performance Working Group will place it on an upcoming
-		meeting agenda and notify the requestor. Consideration and disposition of the
-		request is by consensus of the W3C Web Performance Working Group. The Chair
-		will then notify the requestor of the outcome and update the registry
-		accordingly.</p>
-	</section>
-	<section class='normative' id='registry'>
-		<h2>Registry</h2>
-		<p>This section is the registry of identified <a>PerformanceEntry.entryType</a>
-		values for performance timeline interfaces [[PERFORMANCE-TIMELINE-2]].</p>
-		<table class="simple" style="width:100%;">
-			<thead>
-				<tr>
-					<th><code>entryType</code> Identifier</th>
-					<th>Interface Type(s)</th>
-                                        <th><a>availableFromTimeline</a></th>
-                                        <th><a>maxBufferSize</a></th>
-					<th>Public Specification(s)</th>
-					<th>Requestor Contact</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td><code>"mark"</code></td>
-					<td>
-						<a data-cite="USER-TIMING-2#dom-performancemark"><code>PerformanceMark</code></a>
-					</td>
-                                        <td><code>True</code></td>
-                                        <td><code>Infinite</code></td>
-					<td>[[!USER-TIMING-2]]</td>
-					<td>
-						<a href="https://www.w3.org/webperf/">W3C</a>
-					</td>
-				</tr>
-				<tr>
-					<td><code>"measure"</code></td>
-					<td>
-						<a data-cite=
-						"USER-TIMING-2#dom-performancemeasure"><code>PerformanceMeasure</code></a>
-					</td>
-                                        <td><code>True</code></td>
-                                        <td><code>Infinite</code></td>
-					<td>[[!USER-TIMING-2]]</td>
-					<td>
-						<a href="https://www.w3.org/webperf/">W3C</a>
-					</td>
-				</tr>
-				<tr>
-					<td><code>"navigation"</code></td>
-					<td>
-						<a data-cite=
-						"NAVIGATION-TIMING-2#dom-performancenavigationtiming"><code>PerformanceNavigationTiming</code></a>
-					</td>
-                                        <td><code>True</code></td>
-                                        <td><code>Infinite</code></td>
-					<td>[[!NAVIGATION-TIMING-2]]</td>
-					<td>
-						<a href="https://www.w3.org/webperf/">W3C</a>
-					</td>
-				</tr>
-				<tr>
-					<td><code>"resource"</code></td>
-					<td>
-						<a data-cite=
-						"RESOURCE-TIMING-2#dom-performanceresourcetiming"><code>PerformanceResourceTiming</code></a>
-					</td>
-                                        <td><code>True</code></td>
-                                        <td><code>250</code></td>
-					<td>[[!RESOURCE-TIMING-2]]</td>
-					<td>
-						<a href="https://www.w3.org/webperf/">W3C</a>
-					</td>
-				</tr>
-				<tr>
-					<td><code>"longtask"</code></td>
-					<td>
-						<a data-cite=
-						"LONGTASKS-1#performancelongtasktiming"><code>PerformanceLongTaskTiming</code></a>
-					</td>
-                                        <td><code>False</code></td>
-                                        <td><code>200</code></td>
-					<td>[[!LONGTASKS-1]]</td>
-					<td>
-						<a href="https://www.w3.org/webperf/">W3C</a>
-					</td>
-				</tr>
-				<tr>
-					<td><code>"paint"</code></td>
-					<td>
-						<a data-cite=
-						"PAINT-TIMING#performancepainttiming"><code>PerformancePaintTiming</code></a>
-					</td>
-                                        <td><code>True</code></td>
-                                        <td><code>2</code></td>
-					<td>[[!PAINT-TIMING]]</td>
-					<td>
-						<a href="https://www.w3.org/webperf/">W3C</a>
-					</td>
+    requests to the <a href=
+    "https://github.com/w3c/timing-entrytypes-registry/">timing-entrytypes-registry</a>
+    repository. The Web Performance Working Group will place it on an upcoming
+    meeting agenda and notify the requestor. Consideration and disposition of the
+    request is by consensus of the W3C Web Performance Working Group. The Chair
+    will then notify the requestor of the outcome and update the registry
+    accordingly.</p>
+  </section>
+  <section class='normative' id='registry'>
+    <h2>Registry</h2>
+    <p>This section is the registry of identified <a>PerformanceEntry.entryType</a>
+    values for performance timeline interfaces [[PERFORMANCE-TIMELINE-2]].</p>
+    <table class="simple" style="width:100%;">
+      <thead>
+        <tr>
+          <th><code>entryType</code> Identifier</th>
+          <th>Interface Type(s)</th>
+          <th><a>availableFromTimeline</a></th>
+          <th><a>maxBufferSize</a></th>
+          <th><a>Should add entry</a></th>
+          <th>Public Specification(s)</th>
+          <th>Requestor Contact</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>"mark"</code></td>
+          <td>
+            <a data-cite="USER-TIMING-2#dom-performancemark"><code>PerformanceMark</code></a>
+          </td>
+          <td><code>True</code></td>
+          <td><code>Infinite</code></td>
+          <td>Return true</td>
+          <td>[[!USER-TIMING-2]]</td>
+          <td>
+            <a href="https://www.w3.org/webperf/">W3C</a>
+          </td>
+        </tr>
+        <tr>
+          <td><code>"measure"</code></td>
+          <td>
+            <a data-cite=
+            "USER-TIMING-2#dom-performancemeasure"><code>PerformanceMeasure</code></a>
+          </td>
+          <td><code>True</code></td>
+          <td><code>Infinite</code></td>
+          <td>Return true</td>
+          <td>[[!USER-TIMING-2]]</td>
+          <td>
+            <a href="https://www.w3.org/webperf/">W3C</a>
+          </td>
+        </tr>
+        <tr>
+          <td><code>"navigation"</code></td>
+          <td>
+            <a data-cite=
+            "NAVIGATION-TIMING-2#dom-performancenavigationtiming"><code>PerformanceNavigationTiming</code></a>
+          </td>
+          <td><code>True</code></td>
+          <td><code>Infinite</code></td>
+          <td>Return true</td>
+          <td>[[!NAVIGATION-TIMING-2]]</td>
+          <td>
+            <a href="https://www.w3.org/webperf/">W3C</a>
+          </td>
+        </tr>
+        <tr>
+          <td><code>"resource"</code></td>
+          <td>
+            <a data-cite=
+            "RESOURCE-TIMING-2#dom-performanceresourcetiming"><code>PerformanceResourceTiming</code></a>
+          </td>
+          <td><code>True</code></td>
+          <td><code>250</code></td>
+          <td>Return true</td>
+          <td>[[!RESOURCE-TIMING-2]]</td>
+          <td>
+            <a href="https://www.w3.org/webperf/">W3C</a>
+          </td>
+        </tr>
+        <tr>
+          <td><code>"longtask"</code></td>
+          <td>
+            <a data-cite=
+            "LONGTASKS-1#performancelongtasktiming"><code>PerformanceLongTaskTiming</code></a>
+          </td>
+          <td><code>False</code></td>
+          <td><code>200</code></td>
+          <td>Return true</td>
+          <td>[[!LONGTASKS-1]]</td>
+          <td>
+            <a href="https://www.w3.org/webperf/">W3C</a>
+          </td>
+        </tr>
+        <tr>
+          <td><code>"paint"</code></td>
+          <td>
+            <a data-cite=
+            "PAINT-TIMING#performancepainttiming"><code>PerformancePaintTiming</code></a>
+          </td>
+          <td><code>True</code></td>
+          <td><code>2</code></td>
+          <td>Return true</td>
+          <td>[[!PAINT-TIMING]]</td>
+          <td>
+            <a href="https://www.w3.org/webperf/">W3C</a>
+          </td>
         </tr>
         <tr>
           <td><code>"element"</code></td>
@@ -190,8 +203,9 @@
             <a data-cite=
             "ELEMENT-TIMING#performanceelementtiming"><code>PerformanceElementTiming</code></a>
           </td>
-                                        <td><code>False</code></td>
-                                        <td><code>150</code></td>
+          <td><code>False</code></td>
+          <td><code>150</code></td>
+          <td>Return true</td>
           <td>[[!ELEMENT-TIMING]]</td>
           <td>
             <a href="https://wicg.io">WICG</a>
@@ -203,8 +217,9 @@
             <a data-cite=
             "EVENT-TIMING#performanceeventtiming"><code>PerformanceEventTiming</code></a>
           </td>
-                                        <td><code>False</code></td>
-                                        <td><code>150</code></td>
+          <td><code>False</code></td>
+          <td><code>150</code></td>
+          <td>Return true</td>
           <td>[[!EVENT-TIMING]]</td>
           <td>
             <a href="https://wicg.io">WICG</a>
@@ -216,8 +231,9 @@
             <a data-cite=
             "EVENT-TIMING#performanceeventtiming"><code>PerformanceEventTiming</code></a>
           </td>
-                                        <td><code>True</code></td>
-                                        <td><code>1</code></td>
+          <td><code>True</code></td>
+          <td><code>1</code></td>
+          <td>Return true</td>
           <td>[[!EVENT-TIMING]]</td>
           <td>
             <a href="https://wicg.io">WICG</a>
@@ -229,8 +245,9 @@
             <a data-cite=
             "LAYOUT-INSTABILITY#layoutshift"><code>LayoutShift</code></a>
           </td>
-                                        <td><code>False</code></td>
-                                        <td><code>150</code></td>
+          <td><code>False</code></td>
+          <td><code>150</code></td>
+          <td>Return true</td>
           <td>[[!LAYOUT-INSTABILITY]]</td>
           <td>
             <a href="https://wicg.io">WICG</a>
@@ -242,15 +259,16 @@
             <a data-cite=
             "LARGEST-CONTENTFUL-PAINT#largestcontentfulpaint"><code>LargestContentfulPaint</code></a>
           </td>
-                                        <td><code>False</code></td>
-                                        <td><code>150</code></td>
+          <td><code>False</code></td>
+          <td><code>150</code></td>
+          <td>Return true</td>
           <td>[[!LARGEST-CONTENTFUL-PAINT]]</td>
           <td>
             <a href="https://wicg.io">WICG</a>
           </td>
         </tr>
-			</tbody>
-		</table>
-	</section>
+      </tbody>
+    </table>
+  </section>
 </body>
 </html>
