@@ -73,11 +73,21 @@
       <li>Each entry type must include a <dfn><code>maxBufferSize</code></dfn> indicating the maximum
         buffer size for this entry type.</li>
       <li>Each entry type must specify an algorithm <dfn>should add entry</dfn> which,
-        given a {{PerformanceEntry}} |entry| of the entry type and a <a data-cite=
+        given a {{PerformanceEntry}} |entry| of the entry type and optionally a <a data-cite=
         'PERFORMANCE-TIMELINE-2#performanceobserverinit-dictionary'>PerformanceObserverInit</a>
-        |options| of an observer observing that entry type, determines whether |entry| must
-        be appended to the observer's <a data-cite=
-        'PERFORMANCE-TIMELINE-2#dfn-observer-buffer'>observer buffer</a> or not.</li>
+        |options| of an observer observing that entry type, determines the following:
+        <ol>
+          <li>If |options| was not provided, whether |entry| is eligible to be added to the
+          performance timeline, regardless of limitations in the buffer size.
+          </li>
+          <li>Otherwise, given <a data-cite=
+          "PERFORMANCE-TIMELINE-2#dfn-registered-performance-observer">registered performance observer</a>
+          |regObs| containing |options| in its <a data-cite=PERFORMANCE-TIMELINE-2#dfn-options-list>
+          options list</a>, whether |entry| must be appended to |regObs|'s <a data-cite=
+          "PERFORMANCE-TIMELINE-2#dfn-observer">observer's</a> <a data-cite=
+          "PERFORMANCE-TIMELINE-2#dfn-observer-buffer">observer buffer</a>.</li>
+        </ol>
+      </li>
     </ul>
     <p>An update to this registry is one of the following:
       <ul>
@@ -87,7 +97,7 @@
         <li>An addition, change, or removal of a column to the table. The column
           containing identifiers must not be removed or changed.
         </li>
-      </ul> 
+      </ul>
     Any person can request an update to this registry by pull
     requests to the <a href=
     "https://github.com/w3c/timing-entrytypes-registry/">timing-entrytypes-registry</a>
