@@ -132,7 +132,7 @@ spec:performance-timeline; type:dfn; text:observer buffer
           data-lt="should add PerformanceEventTiming">Should add
           PerformanceEventTiming</a></td>
         <td>[[!EVENT-TIMING]]</td>
-        <td><a href="https://wicg.io">WICG</a></td>
+        <td><a href="https://www.w3.org/webperf/">W3C</a></td>
       </tr>
       <tr>
         <td><code>"first-input"</code></td>
@@ -143,7 +143,7 @@ spec:performance-timeline; type:dfn; text:observer buffer
           data-lt="should add PerformanceEventTiming">Should add
           PerformanceEventTiming</a></td>
         <td>[[!EVENT-TIMING]]</td>
-        <td><a href="https://wicg.io">WICG</a></td>
+        <td><a href="https://www.w3.org/webperf/">W3C</a></td>
       </tr>
       <tr>
         <td><code>"largest-contentful-paint"</code></td>
@@ -152,7 +152,7 @@ spec:performance-timeline; type:dfn; text:observer buffer
         <td><code>150</code></td>
         <td>Return true</td>
         <td>[[!LARGEST-CONTENTFUL-PAINT]]</td>
-        <td><a href="https://wicg.io">WICG</a></td>
+        <td><a href="https://www.w3.org/webperf/">W3C</a></td>
       </tr>
       <tr>
         <td><code>"layout-shift"</code></td>
