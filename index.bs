@@ -218,7 +218,7 @@ spec:performance-timeline; type:dfn; text:observer buffer
       <tr>
         <td><code>"container"</code></td>
         <td>{{PerformanceContainerTiming}}</td>
-        <td><code>True</code></td>
+        <td><code>False</code></td>
         <td><code>150</code></td>
         <td>Return true</td>
         <td>[[!CONTAINER-TIMING]]</td>
