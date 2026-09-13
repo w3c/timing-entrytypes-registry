@@ -7,7 +7,7 @@
   <link href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED" rel="stylesheet">
   <meta content="Bikeshed version ac92c2f0d, updated Fri Aug 21 16:01:29 2026 -0700" name="generator">
   <link href="https://www.w3.org/TR/timing-entrytypes-registry/" rel="canonical">
-  <meta content="ea16324386c173d931ea2e22c3e7c4460b2c9a24" name="revision">
+  <meta content="db5623f7f35e311e927b6c98e51ca20d5ef4eb92" name="revision">
   <meta content="dark light" name="color-scheme">
   <link href="https://www.w3.org/StyleSheets/TR/2021/dark.css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css">
 <style>/* Boilerplate: style-autolinks */
@@ -591,8 +591,10 @@ dfn > a.self-link::before      { content: "#"; }
       <dd><a href="https://www.w3.org/TR/timing-entrytypes-registry/">https://www.w3.org/TR/timing-entrytypes-registry/</a>
       <dt>Feedback:
       <dd><a href="https://github.com/w3c/timing-entrytypes-registry/issues/">GitHub</a>
-      <dt class="editor">Editor:
+      <dt class="editor">Editors:
       <dd class="editor h-card p-author vcard" data-editor-id="6457"><span class="fn p-name">Philippe Le Hegaret</span> (<span class="org p-org">W3C</span>)
+      <dd class="editor h-card p-author vcard" data-editor-id="138839"><a class="email fn p-name u-email" href="mailto:barrypollard@google.com">Barry Pollard</a> (<a class="org p-org" href="https://www.google.com">Google</a>)
+      <dd class="editor h-card p-author vcard" data-editor-id="58673"><a class="email fn p-name u-email" href="mailto:yoav@yoav.ws">Yoav Weiss</a> (<a class="org p-org" href="https://shopify.com">Shopify</a>)
      </dl>
     </div>
    </details>
@@ -726,6 +728,72 @@ and Update Process</a>.</p>
        <th>Requestor Contact
      <tbody>
       <tr>
+       <td><code>"container"</code>
+       <td><code class="idl"><a data-link-type="idl" href="https://wicg.github.io/container-timing/#performancecontainertiming" id="ref-for-performancecontainertiming">PerformanceContainerTiming</a></code>
+       <td><code>False</code>
+       <td><code>150</code>
+       <td>Return true
+       <td><a data-link-type="biblio" href="#biblio-container-timing" title="Container Timing API">[CONTAINER-TIMING]</a>
+       <td><a href="https://wicg.io">WICG</a>
+      <tr>
+       <td><code>"element"</code>
+       <td><code class="idl"><a data-link-type="idl" href="https://w3c.github.io/element-timing/#performanceelementtiming" id="ref-for-performanceelementtiming">PerformanceElementTiming</a></code>
+       <td><code>False</code>
+       <td><code>150</code>
+       <td>Return true
+       <td><a data-link-type="biblio" href="#biblio-element-timing" title="Element Timing API">[ELEMENT-TIMING]</a>
+       <td><a href="https://wicg.io">WICG</a>
+      <tr>
+       <td><code>"event"</code>
+       <td><code class="idl"><a data-link-type="idl" href="https://w3c.github.io/event-timing/#performanceeventtiming" id="ref-for-performanceeventtiming">PerformanceEventTiming</a></code>
+       <td><code>False</code>
+       <td><code>150</code>
+       <td><a data-link-type="dfn" href="https://w3c.github.io/event-timing/#should-add-performanceeventtiming" id="ref-for-should-add-performanceeventtiming">Should add
+          PerformanceEventTiming</a>
+       <td><a data-link-type="biblio" href="#biblio-event-timing" title="Event Timing API">[EVENT-TIMING]</a>
+       <td><a href="https://www.w3.org/webperf/">W3C</a>
+      <tr>
+       <td><code>"first-input"</code>
+       <td><code class="idl"><a data-link-type="idl" href="https://w3c.github.io/event-timing/#performanceeventtiming" id="ref-for-performanceeventtiming①">PerformanceEventTiming</a></code>
+       <td><code>True</code>
+       <td><code>1</code>
+       <td><a data-link-type="dfn" href="https://w3c.github.io/event-timing/#should-add-performanceeventtiming" id="ref-for-should-add-performanceeventtiming①">Should add
+          PerformanceEventTiming</a>
+       <td><a data-link-type="biblio" href="#biblio-event-timing" title="Event Timing API">[EVENT-TIMING]</a>
+       <td><a href="https://www.w3.org/webperf/">W3C</a>
+      <tr>
+       <td><code>"largest-contentful-paint"</code>
+       <td><code class="idl"><a data-link-type="idl" href="https://w3c.github.io/largest-contentful-paint/#largestcontentfulpaint" id="ref-for-largestcontentfulpaint">LargestContentfulPaint</a></code>
+       <td><code>False</code>
+       <td><code>150</code>
+       <td>Return true
+       <td><a data-link-type="biblio" href="#biblio-largest-contentful-paint" title="Largest Contentful Paint">[LARGEST-CONTENTFUL-PAINT]</a>
+       <td><a href="https://www.w3.org/webperf/">W3C</a>
+      <tr>
+       <td><code>"layout-shift"</code>
+       <td><code class="idl"><a data-link-type="idl" href="https://wicg.github.io/layout-instability/#layoutshift" id="ref-for-layoutshift">LayoutShift</a></code>
+       <td><code>False</code>
+       <td><code>150</code>
+       <td>Return true
+       <td><a data-link-type="biblio" href="#biblio-layout-instability" title="Layout Instability API">[LAYOUT-INSTABILITY]</a>
+       <td><a href="https://wicg.io">WICG</a>
+      <tr>
+       <td><code>"longtask"</code>
+       <td><code class="idl"><a data-link-type="idl" href="https://w3c.github.io/longtasks/#performancelongtasktiming" id="ref-for-performancelongtasktiming">PerformanceLongTaskTiming</a></code>
+       <td><code>False</code>
+       <td><code>200</code>
+       <td>Return true
+       <td><a data-link-type="biblio" href="#biblio-longtasks-1" title="Long Tasks API">[LONGTASKS-1]</a>
+       <td><a href="https://www.w3.org/webperf/">W3C</a>
+      <tr>
+       <td><code>"long-animation-frame"</code>
+       <td><code class="idl"><a data-link-type="idl" href="https://w3c.github.io/long-animation-frames/#performancelonganimationframetiming" id="ref-for-performancelonganimationframetiming">PerformanceLongAnimationFrameTiming</a></code>
+       <td><code>True</code>
+       <td><code>200</code>
+       <td>Return true
+       <td><a data-link-type="biblio" href="#biblio-long-animation-frames" title="Long Animation Frames API">[LONG-ANIMATION-FRAMES]</a>
+       <td><a href="https://www.w3.org/webperf/">W3C</a>
+      <tr>
        <td><code>"mark"</code>
        <td><code class="idl"><a data-link-type="idl" href="https://w3c.github.io/user-timing/#performancemark" id="ref-for-performancemark">PerformanceMark</a></code>
        <td><code>True</code>
@@ -750,22 +818,6 @@ and Update Process</a>.</p>
        <td><a data-link-type="biblio" href="#biblio-navigation-timing-2" title="Navigation Timing Level 2">[NAVIGATION-TIMING-2]</a>
        <td><a href="https://www.w3.org/webperf/">W3C</a>
       <tr>
-       <td><code>"resource"</code>
-       <td><code class="idl"><a data-link-type="idl" href="https://w3c.github.io/resource-timing/#performanceresourcetiming" id="ref-for-performanceresourcetiming">PerformanceResourceTiming</a></code>
-       <td><code>True</code>
-       <td><code>250</code>
-       <td>Return true
-       <td><a data-link-type="biblio" href="#biblio-resource-timing-2" title="Resource Timing">[RESOURCE-TIMING-2]</a>
-       <td><a href="https://www.w3.org/webperf/">W3C</a>
-      <tr>
-       <td><code>"longtask"</code>
-       <td><code class="idl"><a data-link-type="idl" href="https://w3c.github.io/longtasks/#performancelongtasktiming" id="ref-for-performancelongtasktiming">PerformanceLongTaskTiming</a></code>
-       <td><code>False</code>
-       <td><code>200</code>
-       <td>Return true
-       <td><a data-link-type="biblio" href="#biblio-longtasks-1" title="Long Tasks API">[LONGTASKS-1]</a>
-       <td><a href="https://www.w3.org/webperf/">W3C</a>
-      <tr>
        <td><code>"paint"</code>
        <td><code class="idl"><a data-link-type="idl" href="https://w3c.github.io/paint-timing/#performancepainttiming" id="ref-for-performancepainttiming">PerformancePaintTiming</a></code>
        <td><code>True</code>
@@ -774,63 +826,13 @@ and Update Process</a>.</p>
        <td><a data-link-type="biblio" href="#biblio-paint-timing" title="Paint Timing">[PAINT-TIMING]</a>
        <td><a href="https://www.w3.org/webperf/">W3C</a>
       <tr>
-       <td><code>"element"</code>
-       <td><code class="idl"><a data-link-type="idl" href="https://w3c.github.io/element-timing/#performanceelementtiming" id="ref-for-performanceelementtiming">PerformanceElementTiming</a></code>
-       <td><code>False</code>
-       <td><code>150</code>
-       <td>Return true
-       <td><a data-link-type="biblio" href="#biblio-element-timing" title="Element Timing API">[ELEMENT-TIMING]</a>
-       <td><a href="https://wicg.io">WICG</a>
-      <tr>
-       <td><code>"event"</code>
-       <td><code class="idl"><a data-link-type="idl" href="https://w3c.github.io/event-timing/#performanceeventtiming" id="ref-for-performanceeventtiming">PerformanceEventTiming</a></code>
-       <td><code>False</code>
-       <td><code>150</code>
-       <td><a data-link-type="dfn" href="https://w3c.github.io/event-timing/#should-add-performanceeventtiming" id="ref-for-should-add-performanceeventtiming">Should add
-          PerformanceEventTiming</a>
-       <td><a data-link-type="biblio" href="#biblio-event-timing" title="Event Timing API">[EVENT-TIMING]</a>
-       <td><a href="https://wicg.io">WICG</a>
-      <tr>
-       <td><code>"first-input"</code>
-       <td><code class="idl"><a data-link-type="idl" href="https://w3c.github.io/event-timing/#performanceeventtiming" id="ref-for-performanceeventtiming①">PerformanceEventTiming</a></code>
+       <td><code>"resource"</code>
+       <td><code class="idl"><a data-link-type="idl" href="https://w3c.github.io/resource-timing/#performanceresourcetiming" id="ref-for-performanceresourcetiming">PerformanceResourceTiming</a></code>
        <td><code>True</code>
-       <td><code>1</code>
-       <td><a data-link-type="dfn" href="https://w3c.github.io/event-timing/#should-add-performanceeventtiming" id="ref-for-should-add-performanceeventtiming①">Should add
-          PerformanceEventTiming</a>
-       <td><a data-link-type="biblio" href="#biblio-event-timing" title="Event Timing API">[EVENT-TIMING]</a>
-       <td><a href="https://wicg.io">WICG</a>
-      <tr>
-       <td><code>"layout-shift"</code>
-       <td><code class="idl"><a data-link-type="idl" href="https://wicg.github.io/layout-instability/#layoutshift" id="ref-for-layoutshift">LayoutShift</a></code>
-       <td><code>False</code>
-       <td><code>150</code>
+       <td><code>250</code>
        <td>Return true
-       <td><a data-link-type="biblio" href="#biblio-layout-instability" title="Layout Instability API">[LAYOUT-INSTABILITY]</a>
-       <td><a href="https://wicg.io">WICG</a>
-      <tr>
-       <td><code>"largest-contentful-paint"</code>
-       <td><code class="idl"><a data-link-type="idl" href="https://w3c.github.io/largest-contentful-paint/#largestcontentfulpaint" id="ref-for-largestcontentfulpaint">LargestContentfulPaint</a></code>
-       <td><code>False</code>
-       <td><code>150</code>
-       <td>Return true
-       <td><a data-link-type="biblio" href="#biblio-largest-contentful-paint" title="Largest Contentful Paint">[LARGEST-CONTENTFUL-PAINT]</a>
-       <td><a href="https://wicg.io">WICG</a>
-      <tr>
-       <td><code>"long-animation-frame"</code>
-       <td><code class="idl"><a data-link-type="idl" href="https://w3c.github.io/long-animation-frames/#performancelonganimationframetiming" id="ref-for-performancelonganimationframetiming">PerformanceLongAnimationFrameTiming</a></code>
-       <td><code>True</code>
-       <td><code>200</code>
-       <td>Return true
-       <td><a data-link-type="biblio" href="#biblio-long-animation-frames" title="Long Animation Frames API">[LONG-ANIMATION-FRAMES]</a>
+       <td><a data-link-type="biblio" href="#biblio-resource-timing-2" title="Resource Timing">[RESOURCE-TIMING-2]</a>
        <td><a href="https://www.w3.org/webperf/">W3C</a>
-      <tr>
-       <td><code>"container"</code>
-       <td><code class="idl"><a data-link-type="idl" href="https://wicg.github.io/container-timing/#performancecontainertiming" id="ref-for-performancecontainertiming">PerformanceContainerTiming</a></code>
-       <td><code>False</code>
-       <td><code>150</code>
-       <td>Return true
-       <td><a data-link-type="biblio" href="#biblio-container-timing" title="Container Timing API">[CONTAINER-TIMING]</a>
-       <td><a href="https://wicg.io">WICG</a>
       <tr>
        <td><code>"visibility-state"</code>
        <td><code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/interaction.html#visibilitystateentry" id="ref-for-visibilitystateentry">VisibilityStateEntry</a></code>
