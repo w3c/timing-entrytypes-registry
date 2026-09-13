@@ -6,6 +6,8 @@ Group: webperf
 URL: https://w3c.github.io/timing-entrytypes-registry/
 TR: https://www.w3.org/TR/timing-entrytypes-registry/
 Editor: Philippe Le Hegaret, W3C, w3cid 6457
+         Barry Pollard, Google https://www.google.com, barrypollard@google.com, w3cid 138839
+         Yoav Weiss, Shopify https://shopify.com, yoav@yoav.ws, w3cid 58673
 Repository: w3c/timing-entrytypes-registry
 Abstract: This document provides a registry of {{PerformanceEntry/entryType}} values used in Performance Timeline [[PERFORMANCE-TIMELINE-2]].
 Level: none
@@ -104,6 +106,82 @@ spec:performance-timeline; type:dfn; text:observer buffer
     </thead>
     <tbody>
       <tr>
+        <td><code>"container"</code></td>
+        <td>{{PerformanceContainerTiming}}</td>
+        <td><code>False</code></td>
+        <td><code>150</code></td>
+        <td>Return true</td>
+        <td>[[!CONTAINER-TIMING]]</td>
+        <td><a href="https://wicg.io">WICG</a></td>
+      </tr>
+      <tr>
+        <td><code>"element"</code></td>
+        <td>{{PerformanceElementTiming}}</td>
+        <td><code>False</code></td>
+        <td><code>150</code></td>
+        <td>Return true</td>
+        <td>[[!ELEMENT-TIMING]]</td>
+        <td><a href="https://wicg.io">WICG</a></td>
+      </tr>
+      <tr>
+        <td><code>"event"</code></td>
+        <td>{{PerformanceEventTiming}}</td>
+        <td><code>False</code></td>
+        <td><code>150</code></td>
+        <td><a data-link-type="dfn" data-link-spec="event-timing"
+          data-lt="should add PerformanceEventTiming">Should add
+          PerformanceEventTiming</a></td>
+        <td>[[!EVENT-TIMING]]</td>
+        <td><a href="https://www.w3.org/webperf/">W3C</a></td>
+      </tr>
+      <tr>
+        <td><code>"first-input"</code></td>
+        <td>{{PerformanceEventTiming}}</td>
+        <td><code>True</code></td>
+        <td><code>1</code></td>
+        <td><a data-link-type="dfn" data-link-spec="event-timing"
+          data-lt="should add PerformanceEventTiming">Should add
+          PerformanceEventTiming</a></td>
+        <td>[[!EVENT-TIMING]]</td>
+        <td><a href="https://www.w3.org/webperf/">W3C</a></td>
+      </tr>
+      <tr>
+        <td><code>"largest-contentful-paint"</code></td>
+        <td>{{LargestContentfulPaint}}</td>
+        <td><code>False</code></td>
+        <td><code>150</code></td>
+        <td>Return true</td>
+        <td>[[!LARGEST-CONTENTFUL-PAINT]]</td>
+        <td><a href="https://www.w3.org/webperf/">W3C</a></td>
+      </tr>
+      <tr>
+        <td><code>"layout-shift"</code></td>
+        <td>{{LayoutShift}}</td>
+        <td><code>False</code></td>
+        <td><code>150</code></td>
+        <td>Return true</td>
+        <td>[[!LAYOUT-INSTABILITY]]</td>
+        <td><a href="https://wicg.io">WICG</a></td>
+      </tr>
+      <tr>
+        <td><code>"longtask"</code></td>
+        <td>{{PerformanceLongTaskTiming}}</td>
+        <td><code>False</code></td>
+        <td><code>200</code></td>
+        <td>Return true</td>
+        <td>[[!LONGTASKS-1]]</td>
+        <td><a href="https://www.w3.org/webperf/">W3C</a></td>
+      </tr>
+      <tr>
+        <td><code>"long-animation-frame"</code></td>
+        <td>{{PerformanceLongAnimationFrameTiming}}</td>
+        <td><code>True</code></td>
+        <td><code>200</code></td>
+        <td>Return true</td>
+        <td>[[!LONG-ANIMATION-FRAMES]]</td>
+        <td><a href="https://www.w3.org/webperf/">W3C</a></td>
+      </tr>
+      <tr>
         <td><code>"mark"</code></td>
         <td>{{PerformanceMark}}</td>
         <td><code>True</code></td>
@@ -131,24 +209,6 @@ spec:performance-timeline; type:dfn; text:observer buffer
         <td><a href="https://www.w3.org/webperf/">W3C</a></td>
       </tr>
       <tr>
-        <td><code>"resource"</code></td>
-        <td>{{PerformanceResourceTiming}}</td>
-        <td><code>True</code></td>
-        <td><code>250</code></td>
-        <td>Return true</td>
-        <td>[[!RESOURCE-TIMING-2]]</td>
-        <td><a href="https://www.w3.org/webperf/">W3C</a></td>
-      </tr>
-      <tr>
-        <td><code>"longtask"</code></td>
-        <td>{{PerformanceLongTaskTiming}}</td>
-        <td><code>False</code></td>
-        <td><code>200</code></td>
-        <td>Return true</td>
-        <td>[[!LONGTASKS-1]]</td>
-        <td><a href="https://www.w3.org/webperf/">W3C</a></td>
-      </tr>
-      <tr>
         <td><code>"paint"</code></td>
         <td>{{PerformancePaintTiming}}</td>
         <td><code>True</code></td>
@@ -158,71 +218,13 @@ spec:performance-timeline; type:dfn; text:observer buffer
         <td><a href="https://www.w3.org/webperf/">W3C</a></td>
       </tr>
       <tr>
-        <td><code>"element"</code></td>
-        <td>{{PerformanceElementTiming}}</td>
-        <td><code>False</code></td>
-        <td><code>150</code></td>
-        <td>Return true</td>
-        <td>[[!ELEMENT-TIMING]]</td>
-        <td><a href="https://wicg.io">WICG</a></td>
-      </tr>
-      <tr>
-        <td><code>"event"</code></td>
-        <td>{{PerformanceEventTiming}}</td>
-        <td><code>False</code></td>
-        <td><code>150</code></td>
-        <td><a data-link-type="dfn" data-link-spec="event-timing"
-          data-lt="should add PerformanceEventTiming">Should add
-          PerformanceEventTiming</a></td>
-        <td>[[!EVENT-TIMING]]</td>
-        <td><a href="https://wicg.io">WICG</a></td>
-      </tr>
-      <tr>
-        <td><code>"first-input"</code></td>
-        <td>{{PerformanceEventTiming}}</td>
+        <td><code>"resource"</code></td>
+        <td>{{PerformanceResourceTiming}}</td>
         <td><code>True</code></td>
-        <td><code>1</code></td>
-        <td><a data-link-type="dfn" data-link-spec="event-timing"
-          data-lt="should add PerformanceEventTiming">Should add
-          PerformanceEventTiming</a></td>
-        <td>[[!EVENT-TIMING]]</td>
-        <td><a href="https://wicg.io">WICG</a></td>
-      </tr>
-      <tr>
-        <td><code>"layout-shift"</code></td>
-        <td>{{LayoutShift}}</td>
-        <td><code>False</code></td>
-        <td><code>150</code></td>
+        <td><code>250</code></td>
         <td>Return true</td>
-        <td>[[!LAYOUT-INSTABILITY]]</td>
-        <td><a href="https://wicg.io">WICG</a></td>
-      </tr>
-      <tr>
-        <td><code>"largest-contentful-paint"</code></td>
-        <td>{{LargestContentfulPaint}}</td>
-        <td><code>False</code></td>
-        <td><code>150</code></td>
-        <td>Return true</td>
-        <td>[[!LARGEST-CONTENTFUL-PAINT]]</td>
-        <td><a href="https://wicg.io">WICG</a></td>
-      </tr>
-      <tr>
-        <td><code>"long-animation-frame"</code></td>
-        <td>{{PerformanceLongAnimationFrameTiming}}</td>
-        <td><code>True</code></td>
-        <td><code>200</code></td>
-        <td>Return true</td>
-        <td>[[!LONG-ANIMATION-FRAMES]]</td>
+        <td>[[!RESOURCE-TIMING-2]]</td>
         <td><a href="https://www.w3.org/webperf/">W3C</a></td>
-      </tr>
-      <tr>
-        <td><code>"container"</code></td>
-        <td>{{PerformanceContainerTiming}}</td>
-        <td><code>False</code></td>
-        <td><code>150</code></td>
-        <td>Return true</td>
-        <td>[[!CONTAINER-TIMING]]</td>
-        <td><a href="https://wicg.io">WICG</a></td>
       </tr>
       <tr>
         <td><code>"visibility-state"</code></td>
