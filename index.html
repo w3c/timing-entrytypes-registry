@@ -7,7 +7,7 @@
   <link href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED" rel="stylesheet">
   <meta content="Bikeshed version ac92c2f0d, updated Fri Aug 21 16:01:29 2026 -0700" name="generator">
   <link href="https://www.w3.org/TR/timing-entrytypes-registry/" rel="canonical">
-  <meta content="67c259f86a71a11367b339317cfb4343cb09ca4f" name="revision">
+  <meta content="ea16324386c173d931ea2e22c3e7c4460b2c9a24" name="revision">
   <meta content="dark light" name="color-scheme">
   <link href="https://www.w3.org/StyleSheets/TR/2021/dark.css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css">
 <style>/* Boilerplate: style-autolinks */
@@ -831,6 +831,14 @@ and Update Process</a>.</p>
        <td>Return true
        <td><a data-link-type="biblio" href="#biblio-container-timing" title="Container Timing API">[CONTAINER-TIMING]</a>
        <td><a href="https://wicg.io">WICG</a>
+      <tr>
+       <td><code>"visibility-state"</code>
+       <td><code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/interaction.html#visibilitystateentry" id="ref-for-visibilitystateentry">VisibilityStateEntry</a></code>
+       <td><code>True</code>
+       <td><code>50</code>
+       <td>Return true
+       <td><a data-link-type="biblio" href="#biblio-html" title="HTML Standard">[HTML]</a>
+       <td><a href="https://whatwg.org/">HTML</a>
     </table>
    </section>
   </main>
@@ -922,6 +930,11 @@ and Update Process</a>.</p>
      <li><span class="dfn-paneled" id="7922dea3">Performance</span>
     </ul>
    <li>
+    <a data-link-type="biblio">[HTML]</a> defines the following terms:
+    <ul>
+     <li><span class="dfn-paneled" id="97c8f952">VisibilityStateEntry</span>
+    </ul>
+   <li>
     <a data-link-type="biblio">[LARGEST-CONTENTFUL-PAINT]</a> defines the following terms:
     <ul>
      <li><span class="dfn-paneled" id="e6935299">LargestContentfulPaint</span>
@@ -985,6 +998,8 @@ and Update Process</a>.</p>
    <dd>Michal Mocny. <a href="https://w3c.github.io/event-timing/"><cite>Event Timing API</cite></a>. URL: <a href="https://w3c.github.io/event-timing/">https://w3c.github.io/event-timing/</a>
    <dt id="biblio-hr-time-3">[HR-TIME-3]
    <dd>Yoav Weiss. <a href="https://w3c.github.io/hr-time/"><cite>High Resolution Time</cite></a>. URL: <a href="https://w3c.github.io/hr-time/">https://w3c.github.io/hr-time/</a>
+   <dt id="biblio-html">[HTML]
+   <dd>Anne van Kesteren; et al. <a href="https://html.spec.whatwg.org/multipage/"><cite>HTML Standard</cite></a>. Living Standard. URL: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a>
    <dt id="biblio-largest-contentful-paint">[LARGEST-CONTENTFUL-PAINT]
    <dd>Yoav Weiss. <a href="https://w3c.github.io/largest-contentful-paint/"><cite>Largest Contentful Paint</cite></a>. URL: <a href="https://w3c.github.io/largest-contentful-paint/">https://w3c.github.io/largest-contentful-paint/</a>
    <dt id="biblio-layout-instability">[LAYOUT-INSTABILITY]
@@ -1220,6 +1235,7 @@ let dfnPanelData = {
 "6d8bccc7": {"dfnID":"6d8bccc7","dfnText":"PerformanceEventTiming","external":true,"refSections":[{"refs":[{"id":"ref-for-performanceeventtiming"},{"id":"ref-for-performanceeventtiming\u2460"}],"title":"3. Registry"}],"url":"https://w3c.github.io/event-timing/#performanceeventtiming"},
 "7922dea3": {"dfnID":"7922dea3","dfnText":"Performance","external":true,"refSections":[{"refs":[{"id":"ref-for-performance"}],"title":"2. Registration Entry Requirements and Update Process"}],"url":"https://w3c.github.io/hr-time/#performance"},
 "91bdcae3": {"dfnID":"91bdcae3","dfnText":"PerformanceMeasure","external":true,"refSections":[{"refs":[{"id":"ref-for-performancemeasure"}],"title":"3. Registry"}],"url":"https://w3c.github.io/user-timing/#performancemeasure"},
+"97c8f952": {"dfnID":"97c8f952","dfnText":"VisibilityStateEntry","external":true,"refSections":[{"refs":[{"id":"ref-for-visibilitystateentry"}],"title":"3. Registry"}],"url":"https://html.spec.whatwg.org/multipage/interaction.html#visibilitystateentry"},
 "a184473f": {"dfnID":"a184473f","dfnText":"should add PerformanceEventTiming","external":true,"refSections":[{"refs":[{"id":"ref-for-should-add-performanceeventtiming"},{"id":"ref-for-should-add-performanceeventtiming\u2460"}],"title":"3. Registry"}],"url":"https://w3c.github.io/event-timing/#should-add-performanceeventtiming"},
 "a550e9ae": {"dfnID":"a550e9ae","dfnText":"PerformanceContainerTiming","external":true,"refSections":[{"refs":[{"id":"ref-for-performancecontainertiming"}],"title":"3. Registry"}],"url":"https://wicg.github.io/container-timing/#performancecontainertiming"},
 "c073ac2c": {"dfnID":"c073ac2c","dfnText":"observer","external":true,"refSections":[{"refs":[{"id":"ref-for-observer"}],"title":"2. Registration Entry Requirements and Update Process"}],"url":"https://w3c.github.io/performance-timeline/#observer"},
@@ -1623,6 +1639,7 @@ let refsData = {
 "#dfn-availablefromtimeline": {"displayText":"availablefromtimeline","export":true,"for_":[],"level":"","normative":true,"shortname":"timing-entrytypes-registry","spec":"timing-entrytypes-registry","status":"local","text":"availablefromtimeline","type":"dfn","url":"#dfn-availablefromtimeline"},
 "#dfn-maxbuffersize": {"displayText":"maxbuffersize","export":true,"for_":[],"level":"","normative":true,"shortname":"timing-entrytypes-registry","spec":"timing-entrytypes-registry","status":"local","text":"maxbuffersize","type":"dfn","url":"#dfn-maxbuffersize"},
 "#dfn-should-add-entry": {"displayText":"should add entry","export":true,"for_":[],"level":"","normative":true,"shortname":"timing-entrytypes-registry","spec":"timing-entrytypes-registry","status":"local","text":"should add entry","type":"dfn","url":"#dfn-should-add-entry"},
+"https://html.spec.whatwg.org/multipage/interaction.html#visibilitystateentry": {"displayText":"VisibilityStateEntry","export":true,"for_":[],"level":"1","normative":true,"shortname":"html","spec":"html","status":"current","text":"VisibilityStateEntry","type":"interface","url":"https://html.spec.whatwg.org/multipage/interaction.html#visibilitystateentry"},
 "https://w3c.github.io/element-timing/#performanceelementtiming": {"displayText":"PerformanceElementTiming","export":true,"for_":[],"level":"1","normative":true,"shortname":"element-timing","spec":"element-timing","status":"current","text":"PerformanceElementTiming","type":"interface","url":"https://w3c.github.io/element-timing/#performanceelementtiming"},
 "https://w3c.github.io/event-timing/#performanceeventtiming": {"displayText":"PerformanceEventTiming","export":true,"for_":[],"level":"1","normative":true,"shortname":"event-timing","spec":"event-timing","status":"current","text":"PerformanceEventTiming","type":"interface","url":"https://w3c.github.io/event-timing/#performanceeventtiming"},
 "https://w3c.github.io/event-timing/#should-add-performanceeventtiming": {"displayText":"should add PerformanceEventTiming","export":true,"for_":[],"level":"1","normative":true,"shortname":"event-timing","spec":"event-timing","status":"current","text":"should add performanceeventtiming","type":"dfn","url":"https://w3c.github.io/event-timing/#should-add-performanceeventtiming"},
