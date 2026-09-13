@@ -224,6 +224,15 @@ spec:performance-timeline; type:dfn; text:observer buffer
         <td>[[!CONTAINER-TIMING]]</td>
         <td><a href="https://wicg.io">WICG</a></td>
       </tr>
+      <tr>
+        <td><code>"visibility-state"</code></td>
+        <td>{{VisibilityStateEntry}}</td>
+        <td><code>True</code></td>
+        <td><code>50</code></td>
+        <td>Return true</td>
+        <td>[[!HTML]]</td>
+        <td><a href="https://whatwg.org/">HTML</a></td>
+      </tr>
     </tbody>
   </table>
 </section>
