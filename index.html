@@ -7,7 +7,7 @@
   <link href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED" rel="stylesheet">
   <meta content="Bikeshed version ac92c2f0d, updated Fri Aug 21 16:01:29 2026 -0700" name="generator">
   <link href="https://www.w3.org/TR/timing-entrytypes-registry/" rel="canonical">
-  <meta content="cd363e3b096c56b8f9974be84dcab61cf53c7f5e" name="revision">
+  <meta content="fe64fe14aa3c6eee1b244d02adbf2129506f19a0" name="revision">
   <meta content="dark light" name="color-scheme">
   <link href="https://www.w3.org/StyleSheets/TR/2021/dark.css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css">
 <style>/* Boilerplate: style-autolinks */
@@ -823,6 +823,14 @@ and Update Process</a>.</p>
        <td>Return true
        <td><a data-link-type="biblio" href="#biblio-long-animation-frames" title="Long Animation Frames API">[LONG-ANIMATION-FRAMES]</a>
        <td><a href="https://www.w3.org/webperf/">W3C</a>
+      <tr>
+       <td><code>"container"</code>
+       <td><code class="idl"><a data-link-type="idl" href="https://wicg.github.io/container-timing/#performancecontainertiming" id="ref-for-performancecontainertiming">PerformanceContainerTiming</a></code>
+       <td><code>False</code>
+       <td><code>150</code>
+       <td>Return true
+       <td><a data-link-type="biblio" href="#biblio-container-timing" title="Container Timing API">[CONTAINER-TIMING]</a>
+       <td><a href="https://wicg.io">WICG</a>
     </table>
    </section>
   </main>
@@ -892,6 +900,11 @@ and Update Process</a>.</p>
   </ul>
   <h3 class="heading no-num no-ref settled" id="index-defined-elsewhere"><span class="content">Terms defined by reference</span><a class="self-link" href="#index-defined-elsewhere"></a></h3>
   <ul class="index">
+   <li>
+    <a data-link-type="biblio">[CONTAINER-TIMING]</a> defines the following terms:
+    <ul>
+     <li><span class="dfn-paneled" id="a550e9ae">PerformanceContainerTiming</span>
+    </ul>
    <li>
     <a data-link-type="biblio">[ELEMENT-TIMING]</a> defines the following terms:
     <ul>
@@ -964,6 +977,8 @@ and Update Process</a>.</p>
   <h2 class="heading no-num no-ref settled" id="references"><span class="content">References</span><a class="self-link" href="#references"></a></h2>
   <h3 class="heading no-num no-ref settled" id="normative"><span class="content">Normative References</span><a class="self-link" href="#normative"></a></h3>
   <dl>
+   <dt id="biblio-container-timing">[CONTAINER-TIMING]
+   <dd><a href="https://wicg.github.io/container-timing/"><cite>Container Timing API</cite></a>. Draft Community Group Report. URL: <a href="https://wicg.github.io/container-timing/">https://wicg.github.io/container-timing/</a>
    <dt id="biblio-element-timing">[ELEMENT-TIMING]
    <dd><a href="https://w3c.github.io/element-timing/"><cite>Element Timing API</cite></a>. Editor's Draft. URL: <a href="https://w3c.github.io/element-timing/">https://w3c.github.io/element-timing/</a>
    <dt id="biblio-event-timing">[EVENT-TIMING]
@@ -1206,6 +1221,7 @@ let dfnPanelData = {
 "7922dea3": {"dfnID":"7922dea3","dfnText":"Performance","external":true,"refSections":[{"refs":[{"id":"ref-for-performance"}],"title":"2. Registration Entry Requirements and Update Process"}],"url":"https://w3c.github.io/hr-time/#performance"},
 "91bdcae3": {"dfnID":"91bdcae3","dfnText":"PerformanceMeasure","external":true,"refSections":[{"refs":[{"id":"ref-for-performancemeasure"}],"title":"3. Registry"}],"url":"https://w3c.github.io/user-timing/#performancemeasure"},
 "a184473f": {"dfnID":"a184473f","dfnText":"should add PerformanceEventTiming","external":true,"refSections":[{"refs":[{"id":"ref-for-should-add-performanceeventtiming"},{"id":"ref-for-should-add-performanceeventtiming\u2460"}],"title":"3. Registry"}],"url":"https://w3c.github.io/event-timing/#should-add-performanceeventtiming"},
+"a550e9ae": {"dfnID":"a550e9ae","dfnText":"PerformanceContainerTiming","external":true,"refSections":[{"refs":[{"id":"ref-for-performancecontainertiming"}],"title":"3. Registry"}],"url":"https://wicg.github.io/container-timing/#performancecontainertiming"},
 "c073ac2c": {"dfnID":"c073ac2c","dfnText":"observer","external":true,"refSections":[{"refs":[{"id":"ref-for-observer"}],"title":"2. Registration Entry Requirements and Update Process"}],"url":"https://w3c.github.io/performance-timeline/#observer"},
 "cb50e74d": {"dfnID":"cb50e74d","dfnText":"PerformanceLongTaskTiming","external":true,"refSections":[{"refs":[{"id":"ref-for-performancelongtasktiming"}],"title":"3. Registry"}],"url":"https://w3c.github.io/longtasks/#performancelongtasktiming"},
 "d41849e0": {"dfnID":"d41849e0","dfnText":"PerformanceObserverInit","external":true,"refSections":[{"refs":[{"id":"ref-for-dictdef-performanceobserverinit"}],"title":"2. Registration Entry Requirements and Update Process"}],"url":"https://w3c.github.io/performance-timeline/#dictdef-performanceobserverinit"},
@@ -1626,6 +1642,7 @@ let refsData = {
 "https://w3c.github.io/resource-timing/#performanceresourcetiming": {"displayText":"PerformanceResourceTiming","export":true,"for_":[],"level":"1","normative":true,"shortname":"resource-timing","spec":"resource-timing","status":"current","text":"PerformanceResourceTiming","type":"interface","url":"https://w3c.github.io/resource-timing/#performanceresourcetiming"},
 "https://w3c.github.io/user-timing/#performancemark": {"displayText":"PerformanceMark","export":true,"for_":[],"level":"1","normative":true,"shortname":"user-timing","spec":"user-timing","status":"current","text":"PerformanceMark","type":"interface","url":"https://w3c.github.io/user-timing/#performancemark"},
 "https://w3c.github.io/user-timing/#performancemeasure": {"displayText":"PerformanceMeasure","export":true,"for_":[],"level":"1","normative":true,"shortname":"user-timing","spec":"user-timing","status":"current","text":"PerformanceMeasure","type":"interface","url":"https://w3c.github.io/user-timing/#performancemeasure"},
+"https://wicg.github.io/container-timing/#performancecontainertiming": {"displayText":"PerformanceContainerTiming","export":true,"for_":[],"level":"1","normative":true,"shortname":"container-timing","spec":"container-timing","status":"current","text":"PerformanceContainerTiming","type":"interface","url":"https://wicg.github.io/container-timing/#performancecontainertiming"},
 "https://wicg.github.io/layout-instability/#layoutshift": {"displayText":"LayoutShift","export":true,"for_":[],"level":"1","normative":true,"shortname":"layout-instability","spec":"layout-instability","status":"current","text":"LayoutShift","type":"interface","url":"https://wicg.github.io/layout-instability/#layoutshift"},
 };
 
