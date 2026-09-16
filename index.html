@@ -7,7 +7,7 @@
   <link href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED" rel="stylesheet">
   <meta content="Bikeshed version ac92c2f0d, updated Fri Aug 21 16:01:29 2026 -0700" name="generator">
   <link href="https://www.w3.org/TR/timing-entrytypes-registry/" rel="canonical">
-  <meta content="db5623f7f35e311e927b6c98e51ca20d5ef4eb92" name="revision">
+  <meta content="b84c8a835ed3c532b8c088434da1fab204e67ef3" name="revision">
   <meta content="dark light" name="color-scheme">
   <link href="https://www.w3.org/StyleSheets/TR/2021/dark.css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css">
 <style>/* Boilerplate: style-autolinks */
@@ -580,7 +580,7 @@ dfn > a.self-link::before      { content: "#"; }
 </p>
    <h1 class="no-ref p-name" id="title">Timing Entry Names Registry</h1>
    <p id="w3c-state"><a href="https://www.w3.org/standards/types/#ED">Editor’s Draft</a>,
-    <time class="dt-updated" datetime="2026-09-13">13 September 2026</time></p>
+    <time class="dt-updated" datetime="2026-09-16">16 September 2026</time></p>
    <details open>
     <summary>More details about this document</summary>
     <div data-fill-with="spec-metadata">
@@ -762,6 +762,14 @@ and Update Process</a>.</p>
        <td><a data-link-type="biblio" href="#biblio-event-timing" title="Event Timing API">[EVENT-TIMING]</a>
        <td><a href="https://www.w3.org/webperf/">W3C</a>
       <tr>
+       <td><code>"interaction-contentful-paint"</code>
+       <td><code class="idl"><a data-link-type="idl" href="https://wicg.github.io/soft-navigations/#interactioncontentfulpaint" id="ref-for-interactioncontentfulpaint">InteractionContentfulPaint</a></code>
+       <td><code>False</code>
+       <td><code>150</code>
+       <td>Return true
+       <td><a data-link-type="biblio" href="#biblio-soft-navigations" title="Soft Navigations and Interaction Contentful Paint">[SOFT-NAVIGATIONS]</a>
+       <td><a href="https://wicg.io">WICG</a>
+      <tr>
        <td><code>"largest-contentful-paint"</code>
        <td><code class="idl"><a data-link-type="idl" href="https://w3c.github.io/largest-contentful-paint/#largestcontentfulpaint" id="ref-for-largestcontentfulpaint">LargestContentfulPaint</a></code>
        <td><code>False</code>
@@ -833,6 +841,14 @@ and Update Process</a>.</p>
        <td>Return true
        <td><a data-link-type="biblio" href="#biblio-resource-timing-2" title="Resource Timing">[RESOURCE-TIMING-2]</a>
        <td><a href="https://www.w3.org/webperf/">W3C</a>
+      <tr>
+       <td><code>"soft-navigation"</code>
+       <td><code class="idl"><a data-link-type="idl" href="https://wicg.github.io/soft-navigations/#performancesoftnavigation" id="ref-for-performancesoftnavigation">PerformanceSoftNavigation</a></code>
+       <td><code>True</code>
+       <td><code>50</code>
+       <td>Return true
+       <td><a data-link-type="biblio" href="#biblio-soft-navigations" title="Soft Navigations and Interaction Contentful Paint">[SOFT-NAVIGATIONS]</a>
+       <td><a href="https://wicg.io">WICG</a>
       <tr>
        <td><code>"visibility-state"</code>
        <td><code class="idl"><a data-link-type="idl" href="https://html.spec.whatwg.org/multipage/interaction.html#visibilitystateentry" id="ref-for-visibilitystateentry">VisibilityStateEntry</a></code>
@@ -983,6 +999,12 @@ and Update Process</a>.</p>
      <li><span class="dfn-paneled" id="f17ac856">PerformanceResourceTiming</span>
     </ul>
    <li>
+    <a data-link-type="biblio">[SOFT-NAVIGATIONS]</a> defines the following terms:
+    <ul>
+     <li><span class="dfn-paneled" id="e4f9b396">InteractionContentfulPaint</span>
+     <li><span class="dfn-paneled" id="c4c5c6c1">PerformanceSoftNavigation</span>
+    </ul>
+   <li>
     <a data-link-type="biblio">[USER-TIMING]</a> defines the following terms:
     <ul>
      <li><span class="dfn-paneled" id="326ded25">PerformanceMark</span>
@@ -1020,6 +1042,8 @@ and Update Process</a>.</p>
    <dd>Yoav Weiss; Noam Rosenthal. <a href="https://w3c.github.io/resource-timing/"><cite>Resource Timing</cite></a>. URL: <a href="https://w3c.github.io/resource-timing/">https://w3c.github.io/resource-timing/</a>
    <dt id="biblio-rfc2119">[RFC2119]
    <dd>S. Bradner. <a href="https://datatracker.ietf.org/doc/html/rfc2119"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. March 1997. Best Current Practice. URL: <a href="https://datatracker.ietf.org/doc/html/rfc2119">https://datatracker.ietf.org/doc/html/rfc2119</a>
+   <dt id="biblio-soft-navigations">[SOFT-NAVIGATIONS]
+   <dd><a href="https://wicg.github.io/soft-navigations/"><cite>Soft Navigations and Interaction Contentful Paint</cite></a>. Draft Community Group Report. URL: <a href="https://wicg.github.io/soft-navigations/">https://wicg.github.io/soft-navigations/</a>
    <dt id="biblio-user-timing">[USER-TIMING]
    <dd>Nicolas Pena Moreno. <a href="https://w3c.github.io/user-timing/"><cite>User Timing</cite></a>. URL: <a href="https://w3c.github.io/user-timing/">https://w3c.github.io/user-timing/</a>
    <dt id="biblio-user-timing-2">[USER-TIMING-2]
@@ -1241,11 +1265,13 @@ let dfnPanelData = {
 "a184473f": {"dfnID":"a184473f","dfnText":"should add PerformanceEventTiming","external":true,"refSections":[{"refs":[{"id":"ref-for-should-add-performanceeventtiming"},{"id":"ref-for-should-add-performanceeventtiming\u2460"}],"title":"3. Registry"}],"url":"https://w3c.github.io/event-timing/#should-add-performanceeventtiming"},
 "a550e9ae": {"dfnID":"a550e9ae","dfnText":"PerformanceContainerTiming","external":true,"refSections":[{"refs":[{"id":"ref-for-performancecontainertiming"}],"title":"3. Registry"}],"url":"https://wicg.github.io/container-timing/#performancecontainertiming"},
 "c073ac2c": {"dfnID":"c073ac2c","dfnText":"observer","external":true,"refSections":[{"refs":[{"id":"ref-for-observer"}],"title":"2. Registration Entry Requirements and Update Process"}],"url":"https://w3c.github.io/performance-timeline/#observer"},
+"c4c5c6c1": {"dfnID":"c4c5c6c1","dfnText":"PerformanceSoftNavigation","external":true,"refSections":[{"refs":[{"id":"ref-for-performancesoftnavigation"}],"title":"3. Registry"}],"url":"https://wicg.github.io/soft-navigations/#performancesoftnavigation"},
 "cb50e74d": {"dfnID":"cb50e74d","dfnText":"PerformanceLongTaskTiming","external":true,"refSections":[{"refs":[{"id":"ref-for-performancelongtasktiming"}],"title":"3. Registry"}],"url":"https://w3c.github.io/longtasks/#performancelongtasktiming"},
 "d41849e0": {"dfnID":"d41849e0","dfnText":"PerformanceObserverInit","external":true,"refSections":[{"refs":[{"id":"ref-for-dictdef-performanceobserverinit"}],"title":"2. Registration Entry Requirements and Update Process"}],"url":"https://w3c.github.io/performance-timeline/#dictdef-performanceobserverinit"},
 "dfn-availablefromtimeline": {"dfnID":"dfn-availablefromtimeline","dfnText":"availableFromTimeline","external":false,"refSections":[{"refs":[{"id":"ref-for-dfn-availablefromtimeline"}],"title":"3. Registry"}],"url":"#dfn-availablefromtimeline"},
 "dfn-maxbuffersize": {"dfnID":"dfn-maxbuffersize","dfnText":"maxBufferSize","external":false,"refSections":[{"refs":[{"id":"ref-for-dfn-maxbuffersize"}],"title":"3. Registry"}],"url":"#dfn-maxbuffersize"},
 "dfn-should-add-entry": {"dfnID":"dfn-should-add-entry","dfnText":"should add entry","external":false,"refSections":[{"refs":[{"id":"ref-for-dfn-should-add-entry"}],"title":"3. Registry"}],"url":"#dfn-should-add-entry"},
+"e4f9b396": {"dfnID":"e4f9b396","dfnText":"InteractionContentfulPaint","external":true,"refSections":[{"refs":[{"id":"ref-for-interactioncontentfulpaint"}],"title":"3. Registry"}],"url":"https://wicg.github.io/soft-navigations/#interactioncontentfulpaint"},
 "e6935299": {"dfnID":"e6935299","dfnText":"LargestContentfulPaint","external":true,"refSections":[{"refs":[{"id":"ref-for-largestcontentfulpaint"}],"title":"3. Registry"}],"url":"https://w3c.github.io/largest-contentful-paint/#largestcontentfulpaint"},
 "e96e0962": {"dfnID":"e96e0962","dfnText":"LayoutShift","external":true,"refSections":[{"refs":[{"id":"ref-for-layoutshift"}],"title":"3. Registry"}],"url":"https://wicg.github.io/layout-instability/#layoutshift"},
 "f05d368d": {"dfnID":"f05d368d","dfnText":"PerformanceNavigationTiming","external":true,"refSections":[{"refs":[{"id":"ref-for-performancenavigationtiming"}],"title":"3. Registry"}],"url":"https://w3c.github.io/navigation-timing/#performancenavigationtiming"},
@@ -1663,6 +1689,8 @@ let refsData = {
 "https://w3c.github.io/user-timing/#performancemeasure": {"displayText":"PerformanceMeasure","export":true,"for_":[],"level":"1","normative":true,"shortname":"user-timing","spec":"user-timing","status":"current","text":"PerformanceMeasure","type":"interface","url":"https://w3c.github.io/user-timing/#performancemeasure"},
 "https://wicg.github.io/container-timing/#performancecontainertiming": {"displayText":"PerformanceContainerTiming","export":true,"for_":[],"level":"1","normative":true,"shortname":"container-timing","spec":"container-timing","status":"current","text":"PerformanceContainerTiming","type":"interface","url":"https://wicg.github.io/container-timing/#performancecontainertiming"},
 "https://wicg.github.io/layout-instability/#layoutshift": {"displayText":"LayoutShift","export":true,"for_":[],"level":"1","normative":true,"shortname":"layout-instability","spec":"layout-instability","status":"current","text":"LayoutShift","type":"interface","url":"https://wicg.github.io/layout-instability/#layoutshift"},
+"https://wicg.github.io/soft-navigations/#interactioncontentfulpaint": {"displayText":"InteractionContentfulPaint","export":true,"for_":[],"level":"1","normative":true,"shortname":"soft-navigations","spec":"soft-navigations","status":"current","text":"InteractionContentfulPaint","type":"interface","url":"https://wicg.github.io/soft-navigations/#interactioncontentfulpaint"},
+"https://wicg.github.io/soft-navigations/#performancesoftnavigation": {"displayText":"PerformanceSoftNavigation","export":true,"for_":[],"level":"1","normative":true,"shortname":"soft-navigations","spec":"soft-navigations","status":"current","text":"PerformanceSoftNavigation","type":"interface","url":"https://wicg.github.io/soft-navigations/#performancesoftnavigation"},
 };
 
 function mkRefHint(link, ref) {
