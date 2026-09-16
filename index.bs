@@ -146,6 +146,15 @@ spec:performance-timeline; type:dfn; text:observer buffer
         <td><a href="https://www.w3.org/webperf/">W3C</a></td>
       </tr>
       <tr>
+        <td><code>"interaction-contentful-paint"</code></td>
+        <td>{{InteractionContentfulPaint}}</td>
+        <td><code>False</code></td>
+        <td><code>150</code></td>
+        <td>Return true</td>
+        <td>[[!SOFT-NAVIGATIONS]]</td>
+        <td><a href="https://wicg.io">WICG</a></td>
+      </tr>
+      <tr>
         <td><code>"largest-contentful-paint"</code></td>
         <td>{{LargestContentfulPaint}}</td>
         <td><code>False</code></td>
@@ -225,6 +234,15 @@ spec:performance-timeline; type:dfn; text:observer buffer
         <td>Return true</td>
         <td>[[!RESOURCE-TIMING-2]]</td>
         <td><a href="https://www.w3.org/webperf/">W3C</a></td>
+      </tr>
+      <tr>
+        <td><code>"soft-navigation"</code></td>
+        <td>{{PerformanceSoftNavigation}}</td>
+        <td><code>True</code></td>
+        <td><code>50</code></td>
+        <td>Return true</td>
+        <td>[[!SOFT-NAVIGATIONS]]</td>
+        <td><a href="https://wicg.io">WICG</a></td>
       </tr>
       <tr>
         <td><code>"visibility-state"</code></td>
