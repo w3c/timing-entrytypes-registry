@@ -221,7 +221,7 @@ spec:performance-timeline; type:dfn; text:observer buffer
         <td><code>"paint"</code></td>
         <td>{{PerformancePaintTiming}}</td>
         <td><code>True</code></td>
-        <td><code>2</code><br>(if <code>soft-navigations</code> are supported this should be 100 (2 x that buffer size))</td>
+        <td><code>2</code></td>
         <td>Return true</td>
         <td>[[!PAINT-TIMING]]</td>
         <td><a href="https://www.w3.org/webperf/">W3C</a></td>
